@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
     HANDLE hThread;
     unsigned threadID;
     int param = 5;
-    hThread = (HANDLE)_beginthradex(NULL, 0, ThreadFunc, (void *)&param, 0, &threadID);
+    hThread = (HANDLE)_beginthreadex(NULL, 0, ThreadFunc, (void *)&param, 0, &threadID);
     if (hThread == 0) {
         puts("beginthreadex error");
         return -1;
